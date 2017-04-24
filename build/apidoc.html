@@ -93,32 +93,6 @@
 
     </ol></li>
 
-    <li class="apidocModuleLi"><a href="#apidoc.module.iso-3166-2.country">module iso-3166-2.country</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.iso-3166-2.country.country">
-            function <span class="apidocSignatureSpan">iso-3166-2.</span>country
-            <span class="apidocSignatureSpan">(e)</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.iso-3166-2.subdivision">module iso-3166-2.subdivision</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.iso-3166-2.subdivision.subdivision">
-            function <span class="apidocSignatureSpan">iso-3166-2.</span>subdivision
-            <span class="apidocSignatureSpan">(e, a)</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
 </ol></div>
 
 <div class="apidocSectionDiv">
@@ -188,78 +162,6 @@ code: &#x27;SE-O&#x27; }
 
 
 
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.iso-3166-2.country" id="apidoc.module.iso-3166-2.country">module iso-3166-2.country</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.iso-3166-2.country.country" id="apidoc.element.iso-3166-2.country.country">
-        function <span class="apidocSignatureSpan">iso-3166-2.</span>country
-        <span class="apidocSignatureSpan">(e)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">country = function (e){if(e=e.trim().toUpperCase(),3===e.length&#x26;&#x26;(e=codes[e]),e in data){var a=data[e];return a.code=e,a}for(var n in data
-)if(data.hasOwnProperty(n)&#x26;&#x26;data[n].name.toUpperCase()===e.toUpperCase()){a=data[n],a.code=n;break}return&#x22;undefined&#x22;==typeof a?{}:
-a}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
-### iso3166.subdivision(country code, subdivision name)
-Retrieves a subdivision by its country code and subdivision name,
-ex (&#x22;US&#x22;, &#x22;Indiana&#x22;).
-
-* * *
-
-### iso3166.<span class="apidocCodeKeywordSpan">country</span>(country code)
-Retrieves a country by its code, ex &#x22;US&#x22;, &#x22;SE&#x22;, &#x22;SWE&#x22;.
-
-* * *
-
-### iso3166.country(country name)
-Retrieves a country by its name, ex &#x22;United States&#x22;, &#x22;Sweden&#x22;.
-...</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.iso-3166-2.subdivision" id="apidoc.module.iso-3166-2.subdivision">module iso-3166-2.subdivision</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.iso-3166-2.subdivision.subdivision" id="apidoc.element.iso-3166-2.subdivision.subdivision">
-        function <span class="apidocSignatureSpan">iso-3166-2.</span>subdivision
-        <span class="apidocSignatureSpan">(e, a)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">subdivision = function (e, a){if(&#x22;undefined&#x22;==typeof a){a=e.trim().toUpperCase();var n=a.split(&#x22;-&#x22;);if(2!==n.length)return{};e=n[0],a=n[1]}3===
-e.length&#x26;&#x26;(e=codes[e]);var t=e+&#x22;-&#x22;+a;if(!(e in data))return{};var i=data[e].sub,m=i[t];if(&#x22;undefined&#x22;==typeof m){for(var o in i)
-if(i.hasOwnProperty(o)&#x26;&#x26;i[o].name.toUpperCase()===a.toUpperCase()){m=i[o],t=o;break}if(&#x22;undefined&#x22;==typeof m)return{}}return m.countryName
-=data[e].name,m.countryCode=e,m.code=t,m.regionCode=2===t.split(&#x22;-&#x22;).length?t.split(&#x22;-&#x22;)[1]:&#x22;&#x22;,m}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
-
-https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3
-
-## Examples
-
-```js
-&#x3e; iso3166.<span class="apidocCodeKeywordSpan">subdivision</span>(&#x22;SE-O&#x22;);
-
-{ type: &#x27;County&#x27;,
-name: &#x27;Västra Götalands län&#x27;,
-countryName: &#x27;Sweden&#x27;,
-countryCode: &#x27;SE&#x27;,
-regionCode: &#x27;O&#x27;,
-code: &#x27;SE-O&#x27; }
-...</pre></li>
-    </ul>
 
 
 </div>
