@@ -1,4 +1,7 @@
-# api documentation for  [iso-3166-2 (v0.6.0)](https://github.com/olahol/iso-3166-2.js#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-iso-3166-2.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-iso-3166-2) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-iso-3166-2.svg)](https://travis-ci.org/npmdoc/node-npmdoc-iso-3166-2)
+# npmdoc-iso-3166-2
+
+#### api documentation for  [iso-3166-2 (v0.6.0)](https://github.com/olahol/iso-3166-2.js#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-iso-3166-2.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-iso-3166-2) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-iso-3166-2.svg)](https://travis-ci.org/npmdoc/node-npmdoc-iso-3166-2)
+
 #### Lookup information about ISO-3166-2 subdivisions.
 
 [![NPM](https://nodei.co/npm/iso-3166-2.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/iso-3166-2)
@@ -80,7 +83,8 @@
             "ipad/6"
         ]
     },
-    "version": "0.6.0"
+    "version": "0.6.0",
+    "bin": {}
 }
 ```
 
